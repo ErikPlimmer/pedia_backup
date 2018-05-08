@@ -189,14 +189,23 @@ p {
     font-weight: 500;
 }
 
-.footer {
-    background: #111;
-    color: #888;
+/* .footer {
+    background: #34495e;
+    color: white;
     text-align: center;
+    position: fixed;
+
+
+} */
+
+.footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    position: fixed;
+
+
 }
-    .footer a {
-        color: #ddd;
-    }
 
 
 

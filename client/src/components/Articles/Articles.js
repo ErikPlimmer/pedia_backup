@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import "./pricing.css";
 import "./marketing.css";
 
-class Home extends React.Component {
+class Articles extends React.Component {
   render() {
     return (<div className="App">
     <div class="header">
@@ -17,25 +17,18 @@ class Home extends React.Component {
         </div>
     </div>
 
-    <div class="splash-container">
-        <div class="splash">
-            <h1 class="splash-head">Welcome to PediaPedia</h1>
-            <p class="splash-subhead">
-                A place for parents to find useful information to help navigate through parenthood.
-            </p>
-            <p>
-                <Link to="/Articles" class="pure-button pure-button-primary">Get Started!</Link>
-            </p>
-        </div>
-    </div>
-
-<div class="footer">
-  PediaPedia &copy
-</div>
+      <div class="banner">
+        <h1 class="banner-head">
+          Articles - Web Scraper (Think of what to write here)
+        </h1>
+      </div>
 
 
-  </div>);
+      <div class="footer l-box">
+        <p></p>
+      </div>
+    </div>);
   }
 }
 
-export default Home;
+export default Articles;
