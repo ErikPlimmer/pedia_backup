@@ -1,17 +1,17 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import "./pricing.css";
-import "./marketing.css";
+import "./Home.css";
+import "./HomePage.css";
 
 class Home extends React.Component {
   render() {
     return (<div className="App">
     <div class="header">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <div class="home-menuHome pure-menu pure-menu-horizontal pure-menu-fixed">
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li>
-                <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Tour</Link></li>
+                <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
+                <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">My Profile</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>

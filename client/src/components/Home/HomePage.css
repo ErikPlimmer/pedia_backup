@@ -81,7 +81,7 @@ label {
 a.pure-button-primary {
     background: white;
     color: #1f8dd6;
-      font-family: 'Pangolin', cursive;
+    font-family: 'Pangolin', cursive;
     border-radius: 5px;
     font-size: 120%;
 }
@@ -92,12 +92,12 @@ a.pure-button-primary {
  * I want to customize how my .pure-menu looks at the top of the page
  */
 
-.home-menu {
+.home-menuHome {
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
-.home-menu {
+.home-menuHome {
     background: #2d3e50;
 }
 .pure-menu.pure-menu-fixed {
@@ -107,21 +107,21 @@ a.pure-button-primary {
     z-index: 4;
 }
 
-.home-menu .pure-menu-heading {
+.home-menuHome .pure-menu-heading {
     color: white;
     font-weight: 400;
     font-size: 120%;
     }
 
-.home-menu .pure-menu-selected a {
+.home-menuHome .pure-menu-selected a {
     color: white;
 }
 
-.home-menu a {
+.home-menuHome a {
     color: #6FBEF3;
 }
-.home-menu li a:hover,
-.home-menu li a:focus {
+.home-menuHome li a:hover,
+.home-menuHome li a:focus {
     background: none;
     border: none;
     color: #AECFE5;

@@ -1,7 +1,5 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import "./ArticlesTwo.css";
-import "./ArticlesOne.css";
 import {
   Card,
   Button,
@@ -10,31 +8,32 @@ import {
   CardText,
   CardColumns,
   CardSubtitle,
-  CardBody,
+  CardBody
 } from 'reactstrap';
+import "./Profile.css";
 
-class Articles extends React.Component {
+class Profile extends React.Component {
   render() {
-    return (<div className="App">
+    return (<div className="Profile">
+
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><Link to="/" class="pure-menu-link">Home</Link></li>
-                <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">Profile</Link></li>
+                <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
+                <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">My Profile</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>
     </div>
 
       <CardColumns style={{
-          marginTop: '150px',
+          marginTop: '75px',
           marginLeft:'75px',
-          marginRight: '75px',
-          marginBottom: '200px'
+          marginRight: '75px'
         }}>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./fourBabies.png")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap"/>
           <CardBody>
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
@@ -43,7 +42,7 @@ class Articles extends React.Component {
           </CardBody>
         </Card>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./diverseToddlers.png")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap"/>
           <CardBody>
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
@@ -52,7 +51,7 @@ class Articles extends React.Component {
           </CardBody>
         </Card>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./threeToddlers.png")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180" alt="Card image cap"/>
           <CardBody>
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
@@ -61,15 +60,8 @@ class Articles extends React.Component {
           </CardBody>
         </Card>
       </CardColumns>
-
-
-
-
-      <div class="footer l-box">
-        <p></p>
-      </div>
     </div>);
   }
 }
 
-export default Articles;
+export default Profile;

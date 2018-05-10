@@ -2,8 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
 import Home from "./components/Home/Home";
 import Articles from "./components/Articles/Articles";
-import Toddlers from "./components/Toddlers/Toddlers";
-import Child from "./components/Child/Child";
+import Profile from "./components/Profile/Profile";
 import './App.css';
 
 class App extends React.Component {
@@ -13,8 +12,7 @@ class App extends React.Component {
       <div className="App">
         <Route exact="exact" path="/" component={Home}/>
         <Route exact="exact" path="/Articles" component={Articles}/>
-        <Route exact="exact" path="/Toddlers" component={Toddlers}/>
-        <Route exact="exact" path="/Child" component={Child}/>
+        <Route exact="exact" path="/Profile" component={Profile}/>
       </div>
     </Router>
   );
