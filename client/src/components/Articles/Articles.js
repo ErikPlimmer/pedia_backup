@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import "./pricing.css";
-import "./marketing.css";
+import "./Article.css";
+// import "./marketing.css";
 
 class Articles extends React.Component {
   render() {
@@ -10,8 +10,9 @@ class Articles extends React.Component {
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 
             <ul class="pure-menu-list">
+                <li class="pure-menu-item"><Link to="/" class="pure-menu-link">Home page</Link></li>
                 <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li>
-                <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Tour</Link></li>
+                <li class="pure-menu-item"><Link to="/Recipes" class="pure-menu-link">Recipes</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>

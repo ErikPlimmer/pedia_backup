@@ -1,11 +1,23 @@
-app.get('/edamam/*', proxyEdamam);
+var axios = require('axios');
+var jsonp = require('jsonp');
+const EDAMAM_RECIPE_URL = 'https://api.edamam.com/search?'+ searchQ + 'app_id=f135b876&app_key=acdb60a92956d657fa8aacf40beb71c6';
+var searchQ ;
 
-function proxyEdamam(request, response) {
-  console.log('Routing a Edamam request');
-  (requestProxy({
-    url: `https://api.edamam.com/search`,
-    headers: {
-      app_id: 'f135b876',
-      app_key: 'acdb60a92956d657fa8aacf40beb71c6'}
-  }))(request, response);
+
+
+
+
+
+
+module.exports={
+getEdamam: function(location){
+    var encodedLocation = encodeURIComponent(location);
+    var requestUrl = `${EDAMAM_RECIPE_URL}&q=${encodedLocation}&from=0&to=100`;
+
+    return axios.get(requestUrl, {crossDomain: true , withCredentials: false}).then(function(res){
+      return res.data.hits;
+    },function(res) {
+      throw new Error(res.data.message);
+    })
+  },
 }
