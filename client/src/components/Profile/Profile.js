@@ -22,7 +22,7 @@ class Profile extends React.Component {
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
                 <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">My Profile</Link></li>
-                <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
+                <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>
     </div>
