@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 export default class SearchForm extends React.Component {
 
@@ -36,10 +36,10 @@ export default class SearchForm extends React.Component {
           {/* <Input name="email" id="location"value="chicken" className="form-control"placeholder="with a placeholder" /> */}
         </FormGroup>
         </Form>
-      <label for="exampleInputEmail1"><h1>Ingredients</h1></label>
-      <input type="text" ref="location" className="form-control" placeholder="chicken,cheese,..."></input>
+      <Label for="exampleInputEmail1"><h1>Ingredients</h1></Label>
+      <Input type="text" ref="location" className="form-control" placeholder="chicken,cheese,..."></Input>
       <br></br>
-      <button type="submit" className="btn btn-primary center-block">Primary</button>
+      <Button type="submit" color="primary">Primary</Button>
         </form>
       </div>
       </div>

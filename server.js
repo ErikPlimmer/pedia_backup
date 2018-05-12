@@ -25,6 +25,16 @@ app.get("*", function(req, res) {
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PediaPediaDB");
 
+var db = mongoose.connection;
+
+db.on('error', function(err){
+  console.log('Mongoose Error: ', err);
+});
+
+db.once('open', function(){
+  console.log('Mongoose connection successful.');
+});
+
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
