@@ -10,7 +10,8 @@ class Home extends React.Component {
         <div class="home-menuHome pure-menu pure-menu-horizontal pure-menu-fixed">
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><Link to="/Recipes" class="pure-menu-link">Recipes</Link></li>
+
+                <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
                 <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
                 <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">My Profile</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
@@ -25,7 +26,10 @@ class Home extends React.Component {
                 A place for parents to find useful information to help navigate through parenthood.
             </p>
             <p>
-                <Link to="/Articles" class="pure-button pure-button-primary">Get Started!</Link>
+                <Link to="/Articles" class="pure-button pure-button-primary">Articles!</Link>
+                </p>
+                <p>
+                <Link to="/RecipePage" class="pure-button pure-button-primary">Recipes!</Link>
             </p>
         </div>
     </div>

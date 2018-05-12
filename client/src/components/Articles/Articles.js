@@ -22,7 +22,7 @@ class Articles extends React.Component {
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><Link to="/" class="pure-menu-link">Home page</Link></li>
                 <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li>
-                <li class="pure-menu-item"><Link to="/Recipes" class="pure-menu-link">Recipes</Link></li>
+                <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
                 <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">Profile</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
