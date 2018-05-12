@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import "./pricing.css";
 import "./Recipes.css";
 import RecipeSearch from "./RecipeSearch";
+import Recipe from "./Recipe";
 
 class RecipePage extends React.Component {
   render() {
@@ -29,8 +30,10 @@ class RecipePage extends React.Component {
         </div>
       
     </div>
-    <div className="containerDiv"><RecipeSearch /></div>
-  {/* <div className="splash-secondary"><h1>Recipe Search area</h1><RecipeSearch /></div> */}
+    {/* <div className="containerDiv"><RecipeSearch /></div> */}
+    <div className="containerDiv"><Recipe /></div>
+
+    
 <div className="footer">
   PediaPedia ©
 </div>

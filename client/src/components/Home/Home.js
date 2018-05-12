@@ -7,7 +7,7 @@ class Home extends React.Component {
   render() {
     return (<div className="App">
     <div class="header">
-        <div class="home-menuHome pure-menu pure-menu-horizontal pure-menu-fixed">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>

@@ -1,23 +1,21 @@
-import React from 'react';
+import React from "react"; 
 import SearchForm from './SearchForm.js';
 import RecipeListEdamam from './RecipeListEdamam.js';
-import RecipeSearchAPI from './APIRoutes/API.js';
+import RecipeSearchAPI from "./APIRoutes/API.js";
 
 
-
-export default class RecipeSearch extends React.Component {
+export default class Recipe extends React.Component {
+    // getInitialState() {
+    //     return {isLoading: false}
+    // }
     constructor(props){
         super(props);
         this.state = {
-            temp1: props.temp1,
-            location: props.location
-        }
+            isLoading: false
+        };
     }
-    getInitialState= function() {
-        return {isLoading: false}
-    }    
 
-   handleSearch= function(location) {
+    handleSearch(location) {
         var that = this;
         this.setState({isLoading: true});
 
@@ -28,11 +26,18 @@ export default class RecipeSearch extends React.Component {
             alert(errorMessage);
         });
 
-    };
 
+
+        if (this.state.isLoading === false) {
+            return false;
+        } else {
+            return true;
+        }
+
+    }
 
     render() {
-        var {temp1,location} = this.state;
+        var {isLoading,temp1, location} = this.state;
         return (
             <div>
                 <SearchForm onSearch={this.handleSearch}/>
@@ -41,7 +46,7 @@ export default class RecipeSearch extends React.Component {
             </div>
         );
         function renderMessage() {
-            if (true) {
+            if (isLoading) {
                 return (
                     <div className="container">
                         <br></br>
@@ -56,10 +61,9 @@ export default class RecipeSearch extends React.Component {
                 return (
                     <div className='row'>
                         <RecipeListEdamam temp1={temp1} location={location}/>
-
                     </div>
                 )
-            } 
+            }
              else {
                 return (
                     <div className="container">
@@ -76,5 +80,3 @@ export default class RecipeSearch extends React.Component {
 
     }
 }
-
-
