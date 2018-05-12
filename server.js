@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Add API Routes
-// app.use("/api/article", APIRoutes);
+// app.use("client/src/components/Recipes/APIRoutes/API.js", getEdamam);
 
 // Send every request to the React app
 // Define any API routes before this runs
