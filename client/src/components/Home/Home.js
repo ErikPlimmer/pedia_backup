@@ -6,34 +6,34 @@ import "./HomePage.css";
 class Home extends React.Component {
   render() {
     return (<div className="App">
-    <div class="header">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <div className="header">
+        <div className="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
-                <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
-                <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">My Profile</Link></li>
-                <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
+            <ul className="pure-menu-list">
+                <li className="pure-menu-item"><Link to="/RecipePage" className="pure-menu-link">Recipes</Link></li>
+                <li className="pure-menu-item"><Link to="/Articles" className="pure-menu-link">Articles</Link></li>
+                <li className="pure-menu-item"><Link to="/Profile" className="pure-menu-link">My Profile</Link></li>
+                <li className="pure-menu-item"><Link to="#" className="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>
     </div>
 
-    <div class="splash-containerHome">
-        <div class="splash">
-            <h1 class="splash-head">Welcome to PediaPedia</h1>
-            <p class="splash-subhead">
+    <div className="splash-containerHome">
+        <div className="splash">
+            <h1 className="splash-head">Welcome to PediaPedia</h1>
+            <p className="splash-subhead">
                 A place for parents to find useful information to help navigate through parenthood.
             </p>
             <p>
-                <Link to="/Articles" class="pure-button pure-button-primary">Articles!</Link>
+                <Link to="/Articles" className="pure-button pure-button-primary">Articles!</Link>
                 </p>
                 <p>
-                <Link to="/RecipePage" class="pure-button pure-button-primary">Recipes!</Link>
+                <Link to="/RecipePage" className="pure-button pure-button-primary">Recipes!</Link>
             </p>
         </div>
     </div>
 
-<div class="footer">
+<div className="footer">
   PediaPedia ©
 </div>
 

@@ -2,6 +2,7 @@ import React from "react";
 import SearchForm from './SearchForm.js';
 import RecipeListEdamam from './RecipeListEdamam.js';
 import RecipeSearchAPI from "./APIRoutes/API.js";
+import {Label} from 'reactstrap';
 
 
 export default class Recipe extends React.Component {
@@ -52,7 +53,7 @@ export default class Recipe extends React.Component {
                         <br></br>
                         <div className="container">
                             <div className="text-center">
-                                <lable className="pagination-centered">Fetching Recipe.....</lable>
+                                <Label className="pagination-centered">Fetching Recipe.....</Label>
                             </div>
                         </div>
                     </div>
@@ -70,7 +71,7 @@ export default class Recipe extends React.Component {
                         <br></br>
                         <div className="container">
                             <div className=" text-center">
-                                <lable className="pagination-centered">Insert ingredients.....</lable>
+                                <Label className="pagination-centered">Insert ingredients.....</Label>
                             </div>
                         </div>
                     </div>

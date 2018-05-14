@@ -1,9 +1,8 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
+import React from "react";
+import {Label} from 'reactstrap';
+export default class RecipeListEdamam extends React.Component{
 
-var RecipeListEdamam = createReactClass({
-
-    render: function() {
+    render() {
         var {temp1} = this.props;
         var body = [];
         for (var i = 0; i < temp1.length; i++) {
@@ -12,7 +11,7 @@ var RecipeListEdamam = createReactClass({
                 <div className="col-md-3 portfolio-item hvr-grow" key={i}>
                     <a href={temp1[i]['recipe']['url']} target="_blank" data-toggle="tooltip" title={temp1[i]['recipe']['label']}>
                         <img className="img-responsive imageClip" src={temp1[i]['recipe']['image']} alt=""></img>
-                        <lable className="pagination-centered">{str}</lable>
+                        <Label className="pagination-centered">{str}</Label>
                     </a>
                     <div>
                       <br></br>
@@ -31,6 +30,4 @@ var RecipeListEdamam = createReactClass({
 
         )
     }
-});
-
-module.exports = RecipeListEdamam;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import SearchForm from './SearchForm.js';
 import RecipeListEdamam from './RecipeListEdamam.js';
 import RecipeSearchAPI from './APIRoutes/API.js';
-
+import { Label } from 'reactstrap';
 
 
 export default class RecipeSearch extends React.Component {
@@ -15,16 +15,18 @@ export default class RecipeSearch extends React.Component {
     }
     getInitialState= function() {
         return {isLoading: false}
+        console.log("in getInitialState", this.isLoading);
     }    
 
    handleSearch= function(location) {
-        var that = this;
+        // var that = this;
         this.setState({isLoading: true});
 
         RecipeSearchAPI.getEdamam(location).then(function(temp) {
-            that.setState({temp1: temp, isLoading: false});
+            this.setState({temp1: temp, isLoading: false});
         }, function(errorMessage) {
-
+                console.log("in handleSearch temp1:" ,this.temp1);
+                console.log("in handleSearch temp:" ,this.temp1);
             alert(errorMessage);
         });
 
@@ -41,13 +43,13 @@ export default class RecipeSearch extends React.Component {
             </div>
         );
         function renderMessage() {
-            if (true) {
+            if (this.isLoading) {
                 return (
                     <div className="container">
                         <br></br>
                         <div className="container">
                             <div className="text-center">
-                                <lable className="pagination-centered">Fetching Recipe.....</lable>
+                                <Label className="pagination-centered">Fetching Recipe.....</Label>
                             </div>
                         </div>
                     </div>
@@ -66,7 +68,7 @@ export default class RecipeSearch extends React.Component {
                         <br></br>
                         <div className="container">
                             <div className=" text-center">
-                                <lable className="pagination-centered">Insert ingredients.....</lable>
+                                <Label className="pagination-centered">Insert ingredients.....</Label>
                             </div>
                         </div>
                     </div>
