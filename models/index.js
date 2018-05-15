@@ -1,5 +1,4 @@
 module.exports = {
     Article: require("./Article"),
-    Profile: require("./Profile")
+    // Profile: require("./Profile")
   };
-  

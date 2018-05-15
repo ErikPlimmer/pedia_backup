@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./ArticlesTwo.css";
 import "./ArticlesOne.css";
-import $ from 'jquery'; 
+import $ from 'jquery';
 import {
   Card,
   Button,
@@ -34,7 +34,7 @@ class Articles extends React.Component {
         this.setState({
           data: articles.data
         })
-      })      
+      })
     })
   }
 
@@ -94,8 +94,7 @@ class Articles extends React.Component {
                   console.log('hey im working here')
                     return(
                       <div id="wrapper" style={{backgroundColor: 'light-blue'}}>
-                      <p>{article.title}</p>
-                      <p>{article.link}</p>
+                      <a href={article.link}>{article.title}</a>
                 </div>)
                 }) : null }</div>
               </div>

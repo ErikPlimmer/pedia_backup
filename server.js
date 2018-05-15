@@ -15,13 +15,17 @@ var db = require("./models");
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
+
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "./client/public/index.html"));
+  });
 }
 
 // Add API Routes
 // app.use("/api/article", APIRoutes);
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
-	let name = "toddler"
+	let name = "baby"
   // First, we grab the body of the html with request
   axios.get(`https://www.parenting.com/${name}`).then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
@@ -68,16 +72,15 @@ app.get('/get-articles', (req, res) => {
 	.then(result  => {
 		console.log(result, "dbArticle from database");
 		res.json(result)
-	})       
+	})
 });
 
 // Send every request to the React app
 // Define any API routes before this runs
 
 
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/public/index.html"));
-});
+
+
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PediaPediaDB");
