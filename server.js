@@ -82,13 +82,13 @@ app.get("*", function(req, res) {
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PediaPediaDB");
 
-var db = mongoose.connection;
+var mongoosedb = mongoose.connection;
 
-db.on('error', function(err){
+mongoosedb.on('error', function(err){
   console.log('Mongoose Error: ', err);
 });
 
-db.once('open', function(){
+mongoosedb.once('open', function(){
   console.log('Mongoose connection successful.');
 });
 

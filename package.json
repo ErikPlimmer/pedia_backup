@@ -1,34 +1,38 @@
 {
-  "name": "FinalProject",
+  "name": "pedia-pedia",
   "version": "1.0.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rupamkumari24/FinalProjectPediaPedia"
-  },
-  "license": "MIT",
+  "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "history": "^4.6.3",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.5",
-    "react-router-dom": "^4.1.2",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.2.0"
+    "body-parser": "^1.18.2",
+    "axios": "latest",
+    "cheerio": "latest",
+    "jquery": "latest",
+    "express": "^4.15.4",
+    "mongoose": "^5.0.17",
+    "bootstrap": "^3.3.7",
+    "bootstrap3": "^3.3.5",
+    "reactstrap": "^6.0.1"
   },
-  "devDependencies": {
-    "babel-core": "^6.21.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "extract-text-webpack-plugin": "^2.1.2",
-    "html-webpack-plugin": "^2.26.0",
-    "path": "^0.12.7",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
-  }
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikPlimmer/PediaPedia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ErikPlimmer/PediaPedia/issues"
+  },
+  "homepage": "https://github.com/ErikPlimmer/PediaPedia#readme"
 }
