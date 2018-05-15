@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./ArticlesTwo.css";
 import "./ArticlesOne.css";
+import $ from 'jquery'; 
 import {
   Card,
   Button,
@@ -13,8 +14,32 @@ import {
   CardBody,
 } from 'reactstrap';
 
+const axios = require("axios");
+var cheerio = require("cheerio");
+
 class Articles extends React.Component {
+
+  state = {
+    data: []
+  }
+
+  componentDidMount = () => {
+    axios.get('/get-articles').then(articles => this.setState({ data: articles.data }))
+  }
+
+  getArticles = () => {
+    axios.get('/scrape').then(result => {
+      axios.get('/get-articles').then(articles => {
+        console.log(articles)
+        this.setState({
+          data: articles.data
+        })
+      })      
+    })
+  }
+
   render() {
+    console.log(this.state.data)
     return (<div className="App">
     <div class="header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -41,7 +66,7 @@ class Articles extends React.Component {
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-            <Button>Button</Button>
+            <Button onClick={this.getArticles}>Button</Button>
           </CardBody>
         </Card>
         <Card>
@@ -50,7 +75,7 @@ class Articles extends React.Component {
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-            <Button>Button</Button>
+            <Button onClick={this.getArticles}>Button</Button>
           </CardBody>
         </Card>
         <Card>
@@ -59,10 +84,21 @@ class Articles extends React.Component {
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-            <Button>Button</Button>
+           <Button onClick={this.getArticles}>Button</Button>
           </CardBody>
         </Card>
       </CardColumns>
+
+                    <div id="wrapper">
+                <div>{this.state.data && this.state.data.length > 0 ? this.state.data.map(article => {
+                  console.log('hey im working here')
+                    return(
+                      <div id="wrapper" style={{backgroundColor: 'light-blue'}}>
+                      <p>{article.title}</p>
+                      <p>{article.link}</p>
+                </div>)
+                }) : null }</div>
+              </div>
 
 
 
