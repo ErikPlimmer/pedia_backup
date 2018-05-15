@@ -48,7 +48,6 @@ class Articles extends React.Component {
                 <li class="pure-menu-item"><Link to="/" class="pure-menu-link">Home page</Link></li>
                 <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li>
                 <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
-                <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">Profile</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>

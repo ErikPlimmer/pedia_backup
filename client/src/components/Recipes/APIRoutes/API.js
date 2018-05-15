@@ -4,11 +4,6 @@ const EDAMAM_RECIPE_URL = 'https://api.edamam.com/search?'+ searchQ + 'app_id=f1
 
 
 
-
-
-
-
-
 module.exports={
 getEdamam: function(location){
     var encodedLocation = encodeURIComponent(location);

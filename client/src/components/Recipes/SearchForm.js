@@ -1,27 +1,43 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, Label, Input} from 'reactstrap';
 
 export default class SearchForm extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      // loaction: this.refs.location.value
+      value: '',
+      location: this.location
     }
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  handleChange(event) {
+    this.setState({name: event.target.value});
+  }
+  
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
   onFormSubmit= function(e){
     e.preventDefault();
 
-    var location = this.refs.location.value;
-    // var location = this.name.email.value;
+    var location = this.state.location.value;
+    console.log("onFormSubmit location:", this.location);
+    console.log("onFormSubmit value:", this.state.value);
 
-    if(location.length>0){
-      this.refs.location.value='chicken';
-      this.props.onSearch(location);
-      this.setState({
-        location
-      })
+    if(this.state.location.length>0){
+      this.id.location.value='chicken';
+      this.props.onSearch(this.state.location);
+
     }
+    this.setState({
+      location: e.target.value
+    })
+console.log("location", this.state.location);
 
   }
 
@@ -29,18 +45,12 @@ export default class SearchForm extends React.Component {
     return(
       <div className="container text-center">
         <div>
-        <form onSubmit={this.onFormSubmit}>
-        <Form>
-        <FormGroup>
-          {/* <Label for="exampleEmail">Email</Label> */}
-          {/* <Input name="email" id="location"value="chicken" className="form-control"placeholder="with a placeholder" /> */}
-        </FormGroup>
-        </Form>
-      <label for="exampleInputEmail1"><h1>Ingredients</h1></label>
-      <input type="text" ref="location" className="form-control" placeholder="chicken,cheese,..."></input>
+        <Form onSubmit={this.onFormSubmit}>
+      <Label for="exampleInputEmail1"><h1>Ingredients</h1></Label>
+      <Input type="text" className="form-control" name="loaction" value={this.state.location} onChange={this.handleChange} placeholder="chicken,cheese,..."></Input>
       <br></br>
-      <button type="submit" className="btn btn-primary center-block">Primary</button>
-        </form>
+      <Button type="submit" color="primary">Primary</Button>
+        </Form>
       </div>
       </div>
 

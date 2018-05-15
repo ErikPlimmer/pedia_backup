@@ -14,11 +14,11 @@ var db = require("./models");
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
 
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "./client/public/index.html"));
-  });
+
+
+  app.use(express.static("client/build"));
+
 }
 
 // Add API Routes
@@ -79,11 +79,23 @@ app.get('/get-articles', (req, res) => {
 // Define any API routes before this runs
 
 
-
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PediaPediaDB");
+
+var mongoosedb = mongoose.connection;
+
+mongoosedb.on('error', function(err){
+  console.log('Mongoose Error: ', err);
+});
+
+mongoosedb.once('open', function(){
+  console.log('Mongoose connection successful.');
+});
 
 app.listen(PORT, function() {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
