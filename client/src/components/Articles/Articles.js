@@ -78,46 +78,38 @@ class Articles extends React.Component {
           marginTop: '150px',
           marginLeft:'75px',
           marginRight: '75px',
-          marginBottom: '200px'
+          marginBottom: '50px'
         }}>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./fourBabies.png")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src={require( "./babies-714082.jpg")} alt="Card image cap"/>
           <CardBody>
-            <CardTitle>Keep</CardTitle>
-            <CardSubtitle>Keep</CardSubtitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-            <Button className="scrape" onClick={this.getArticles}>scrape</Button>
-            <Button onClick={this.clearArticles}>clear</Button>
+
+            <Button outline color="success" size="lg" block onClick={this.getArticles}>Baby</Button>
           </CardBody>
         </Card>
         <Card>
           <CardImg top="top" width="100%" src={require( "./diverseToddlers.png")} alt="Card image cap"/>
           <CardBody>
-            <CardTitle>Keep</CardTitle>
-            <CardSubtitle>Keep</CardSubtitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-            <Button onClick={this.getArticles}>Button</Button>
+          <Button outline color="warning" size="lg" block onClick={this.getArticles}>Toddlers</Button>
           </CardBody>
         </Card>
         <Card>
           <CardImg top="top" width="100%" src={require( "./threeToddlers.png")} alt="Card image cap"/>
           <CardBody>
-            <CardTitle>Keep</CardTitle>
-            <CardSubtitle>Keep</CardSubtitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-           <Button onClick={this.getArticles}>Button</Button>
+            <Button outline color="danger" size="lg" block onClick={this.getArticles}>Button</Button>
           </CardBody>
         </Card>
       </CardColumns>
-
                     <div id="wrapper">
-                <div>{this.state.data && this.state.data.length > 0 ? this.state.data.map(article => {
+
+
+                  {this.state.data && this.state.data.length > 0 ? this.state.data.map(article => {
                   console.log('hey im working here')
                     return(
                       <div id="wrapper" style={{backgroundColor: 'light-blue'}}>
                       <a href={article.link}>{article.title}</a>
                 </div>)
-                }) : null }</div>
+                }) : null }
               </div>
 
 
