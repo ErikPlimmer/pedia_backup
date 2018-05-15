@@ -5,39 +5,38 @@ export default class SearchForm extends React.Component {
 
   constructor(props){
     super(props);
+    console.log(props);
     this.state = {
-      value: '',
-      location: this.location
+      value: ''
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    
   }
 
   handleChange(event) {
-    this.setState({name: event.target.value});
+
+    console.log("handlechange");
+    this.setState({value: event.target.value});
   }
   
-  handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
-  }
+  // handleSubmit(event) {
+  //   alert('A name was submitted: ' + this.state.value);
+  //   event.preventDefault();
+  // }
 
-  onFormSubmit= function(e){
+  onFormSubmit(e){
     e.preventDefault();
-
-    var location = this.state.location.value;
-    console.log("onFormSubmit location:", this.location);
+    // var location = this.state.location;
     console.log("onFormSubmit value:", this.state.value);
 
-    if(this.state.location.length>0){
-      this.id.location.value='chicken';
-      this.props.onSearch(this.state.location);
+    // if(this.state.value.length>0){
+    //   this.value='chicken';
+    console.log(e.target);
+      this.props.onSearch(this.state.value);
 
-    }
-    this.setState({
-      location: e.target.value
-    })
-    console.log("location", this.state.location);
+    // }
+    
 
   }
 
@@ -47,7 +46,7 @@ export default class SearchForm extends React.Component {
         <div>
         <Form onSubmit={this.onFormSubmit}>
       <Label for="exampleInputEmail1"><h1>Ingredients</h1></Label>
-      <Input type="text" className="form-control" name="loaction" value={this.state.location} onChange={this.handleChange} placeholder="chicken,cheese,..."></Input>
+      <Input type="text" className="form-control" value={this.state.location} onChange={this.handleChange} placeholder="chicken,cheese,..."></Input>
       <br></br>
       <Button type="submit" color="primary">Primary</Button>
         </Form>

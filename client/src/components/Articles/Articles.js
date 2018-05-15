@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./ArticlesTwo.css";
 import "./ArticlesOne.css";
-import $ from 'jquery';
+// import $ from 'jquery';
 import {
   Card,
   Button,
@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 
 const axios = require("axios");
-var cheerio = require("cheerio");
+// var cheerio = require("cheerio");
 
 class Articles extends React.Component {
 
@@ -37,6 +37,27 @@ class Articles extends React.Component {
       })
     })
   }
+  deleteArticles = (id) => {
+      axios.delete('/delete-articles').then(articles => {
+        console.log(articles)
+        this.setState({
+          data: articles.data
+        })
+      })
+  }
+  saveArticles = () => {
+    axios.create('/save-articles').then(articles => {
+      console.log(articles)
+      this.setState({
+        data: articles.data
+      })
+    })
+  }
+  clearArticles = () => {
+    this.setState({
+      data: ''
+    })
+  };
 
   render() {
     console.log(this.state.data)
@@ -46,7 +67,7 @@ class Articles extends React.Component {
 
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><Link to="/" class="pure-menu-link">Home page</Link></li>
-                <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li>
+                {/* <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li> */}
                 <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
@@ -65,7 +86,8 @@ class Articles extends React.Component {
             <CardTitle>Keep</CardTitle>
             <CardSubtitle>Keep</CardSubtitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a ligula in ligula molestie iaculis non et elit. Fusce tincidunt justo at diam rhoncus, non varius dui iaculis.</CardText>
-            <Button onClick={this.getArticles}>Button</Button>
+            <Button className="scrape" onClick={this.getArticles}>scrape</Button>
+            <Button onClick={this.clearArticles}>clear</Button>
           </CardBody>
         </Card>
         <Card>

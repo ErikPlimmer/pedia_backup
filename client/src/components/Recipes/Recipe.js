@@ -6,24 +6,26 @@ import {Label} from 'reactstrap';
 
 
 export default class Recipe extends React.Component {
-    // getInitialState() {
-    //     return {isLoading: false}
-    // }
+    getInitialState() {
+        return {isLoading: false}
+    }
     constructor(props){
         super(props);
         this.state = {
             isLoading: false
+            
         };
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
-    handleSearch(location) {
+    handleSearch(value) {
         var that = this;
         this.setState({isLoading: true});
-
-        RecipeSearchAPI.getEdamam(location).then(function(temp) {
+        console.log("value",value);
+        RecipeSearchAPI.getEdamam(value).then(function(temp) {
             that.setState({temp1: temp, isLoading: false});
         }, function(errorMessage) {
-
+            
             alert(errorMessage);
         });
 
@@ -38,7 +40,7 @@ export default class Recipe extends React.Component {
     }
 
     render() {
-        var {isLoading,temp1, location} = this.state;
+        var {isLoading,temp1, value} = this.state;
         return (
             <div>
                 <SearchForm onSearch={this.handleSearch}/>
@@ -59,9 +61,21 @@ export default class Recipe extends React.Component {
                     </div>
                 )
             } else if (temp1 ) {
+                if (temp1.length === 0){
+                    return (
+                        <div className="container">
+                            <br></br>
+                            <div className="container">
+                                <div className=" text-center">
+                                    <Label className="pagination-centered">Try again.....</Label>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                }
                 return (
                     <div className='row'>
-                        <RecipeListEdamam temp1={temp1} location={location}/>
+                        <RecipeListEdamam temp1={temp1} value={value}/>
                     </div>
                 )
             }

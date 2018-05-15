@@ -74,7 +74,20 @@ app.get('/get-articles', (req, res) => {
 		res.json(result)
 	})
 });
-
+app.get('/delete-articles', (req, res) => {
+	db.Article.delete()
+	.then(result  => {
+		console.log(result, "dbArticle from database");
+		res.json(result)
+	})
+});
+app.get('/save-articles', (req, res) => {
+	db.Article.create()
+	.then(result  => {
+		console.log(result, "dbArticle from database");
+		res.json(result)
+	})
+});
 // Send every request to the React app
 // Define any API routes before this runs
 
