@@ -37,7 +37,7 @@ export default class SearchForm extends React.Component {
     this.setState({
       location: e.target.value
     })
-console.log("location", this.state.location);
+    console.log("location", this.state.location);
 
   }
 

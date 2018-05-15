@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import "./pricing.css";
 import "./Recipes.css";
-import RecipeSearch from "./RecipeSearch";
+// import RecipeSearch from "./RecipeSearch";
 import Recipe from "./Recipe";
 
 class RecipePage extends React.Component {
