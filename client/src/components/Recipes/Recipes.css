@@ -12,6 +12,7 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 13px;
+    font-family: 'Pangolin', cursive;
 
 }
 
@@ -99,7 +100,7 @@ a.pure-button-primary {
 }
 .home-menu {
     background: #2d3e50;
-    
+
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -120,7 +121,7 @@ a.pure-button-primary {
 
 .home-menu a {
     color: #6FBEF3;
-    
+
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -203,7 +204,7 @@ a.pure-button-primary {
     font-family: 'Indie Flower', cursive;
     font-size: 28px;
 }
-.splash-secondary { 
+.splash-secondary {
     color:green;
 
     /* background-color: goldenrod; */

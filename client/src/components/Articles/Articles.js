@@ -39,7 +39,7 @@ class Articles extends React.Component {
   }
   deleteArticles = (id) => {
       axios.delete('/delete-articles').then(articles => {
-        
+
         this.setState({
           data: ""
         })
@@ -81,23 +81,33 @@ class Articles extends React.Component {
           marginBottom: '50px'
         }}>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./babies-714082.jpg")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src={require( "./babies3.jpg")} alt="Card image cap"/>
           <CardBody>
 
+<<<<<<< HEAD
             <Button outline color="success" size="lg" block onClick={this.getArticles}>Articles about babies</Button>
+=======
+            <Button outline color="success" size="lg" block onClick={this.getArticles}>Baby</Button>
+
+>>>>>>> 7d0292583016d022cfbada5759d2757904d5a6d7
             {/* <Button outline color="success" size="lg" block onClick={this.deleteArticles}>clear articles</Button> */}
           </CardBody>
+
         </Card>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./diverseToddlers.png")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src={require( "./toddlers4.jpeg")} alt="Card image cap"/>
           <CardBody>
           <Button outline color="warning" size="lg" block onClick={this.getArticles}>Articles about toddlers</Button>
           </CardBody>
         </Card>
         <Card>
-          <CardImg top="top" width="100%" src={require( "./threeToddlers.png")} alt="Card image cap"/>
+          <CardImg top="top" width="100%" src={require( "./children2.jpg")} alt="Card image cap"/>
           <CardBody>
+<<<<<<< HEAD
             <Button outline color="danger" size="lg" block onClick={this.getArticles}>Atricles about children</Button>
+=======
+            <Button outline color="danger" size="lg" block onClick={this.getArticles}>Child</Button>
+>>>>>>> 7d0292583016d022cfbada5759d2757904d5a6d7
           </CardBody>
         </Card>
       </CardColumns>
@@ -138,7 +148,7 @@ class Articles extends React.Component {
       </div>
     </div>);
   }
- 
+
 }
 
 export default Articles;

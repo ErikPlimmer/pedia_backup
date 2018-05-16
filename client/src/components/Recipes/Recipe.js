@@ -1,8 +1,9 @@
-import React from "react"; 
+import React from "react";
 import SearchForm from './SearchForm.js';
 import RecipeListEdamam from './RecipeListEdamam.js';
 import RecipeSearchAPI from "./APIRoutes/API.js";
-import {Label} from 'reactstrap';
+import {Label, Progress} from 'reactstrap';
+import "./Recipes.css";
 
 
 export default class Recipe extends React.Component {
@@ -13,7 +14,7 @@ export default class Recipe extends React.Component {
         super(props);
         this.state = {
             isLoading: false
-            
+
         };
         this.handleSearch = this.handleSearch.bind(this);
     }
@@ -25,7 +26,7 @@ export default class Recipe extends React.Component {
         RecipeSearchAPI.getEdamam(value).then(function(temp) {
             that.setState({temp1: temp, isLoading: false});
         }, function(errorMessage) {
-            
+
             alert(errorMessage);
         });
 
@@ -55,8 +56,7 @@ export default class Recipe extends React.Component {
                         <br></br>
                         <div className="container">
                             <div className="text-center">
-                                <Label className="pagination-centered">Fetching Recipe.....</Label>
-                            </div>
+                              <Progress animated color="info" value={"75"}>Fetching Recipe...</Progress>                            </div>
                         </div>
                     </div>
                 )
@@ -85,7 +85,7 @@ export default class Recipe extends React.Component {
                         <br></br>
                         <div className="container">
                             <div className=" text-center">
-                                <Label className="pagination-centered">Insert ingredients.....</Label>
+                                <Label className="pagination-centered"></Label>
                             </div>
                         </div>
                     </div>

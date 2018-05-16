@@ -3,6 +3,7 @@ import SearchForm from './SearchForm.js';
 import RecipeListEdamam from './RecipeListEdamam.js';
 import RecipeSearchAPI from './APIRoutes/API.js';
 import { Label } from 'reactstrap';
+import "./Recipes.css";
 
 
 export default class RecipeSearch extends React.Component {
@@ -16,7 +17,7 @@ export default class RecipeSearch extends React.Component {
     getInitialState= function() {
         return {isLoading: false}
         console.log("in getInitialState", this.isLoading);
-    }    
+    }
 
    handleSearch= function(location) {
         // var that = this;
@@ -61,7 +62,7 @@ export default class RecipeSearch extends React.Component {
 
                     </div>
                 )
-            } 
+            }
              else {
                 return (
                     <div className="container">
@@ -78,5 +79,3 @@ export default class RecipeSearch extends React.Component {
 
     }
 }
-
-
