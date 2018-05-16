@@ -22,18 +22,18 @@ class RecipePage extends React.Component {
 
     <div className="splash-containerDiv">
         <div className="splash">
-            <h1 className="splash-head">Welcome to PediaPedia</h1>
+            <h1 className="splash-head">Anytime is a Good Time for a Home Cooked Meal!</h1>
             <p className="splash-subhead">
             Search recipes below to find the perfect meal for your family.
             </p>
-            
+
         </div>
-      
+
     </div>
     {/* <div className="containerDiv"><RecipeSearch /></div> */}
     <div className="containerDiv"><Recipe /></div>
 
-    
+
 <div className="footer">
   PediaPedia ©
 </div>

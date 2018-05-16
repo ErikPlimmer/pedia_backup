@@ -86,8 +86,6 @@ class Articles extends React.Component {
 
             <Button outline color="success" size="lg" block onClick={this.getArticles}>Baby</Button>
 
-              </CardBody>
-
             {/* <Button outline color="success" size="lg" block onClick={this.deleteArticles}>clear articles</Button> */}
           </CardBody>
 
