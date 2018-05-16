@@ -30,7 +30,7 @@ class Articles extends React.Component {
   getArticles = () => {
     axios.get('/scrape').then(result => {
       axios.get('/get-articles').then(articles => {
-        console.log(articles)
+        console.log("articles:",articles)
         this.setState({
           data: articles.data
         })
@@ -84,20 +84,20 @@ class Articles extends React.Component {
           <CardImg top="top" width="100%" src={require( "./babies-714082.jpg")} alt="Card image cap"/>
           <CardBody>
 
-            <Button outline color="success" size="lg" block onClick={this.getArticles}>Baby</Button>
+            <Button outline color="success" size="lg" block onClick={this.getArticles}>Articles about babies</Button>
             {/* <Button outline color="success" size="lg" block onClick={this.deleteArticles}>clear articles</Button> */}
           </CardBody>
         </Card>
         <Card>
           <CardImg top="top" width="100%" src={require( "./diverseToddlers.png")} alt="Card image cap"/>
           <CardBody>
-          <Button outline color="warning" size="lg" block onClick={this.getArticles}>Toddlers</Button>
+          <Button outline color="warning" size="lg" block onClick={this.getArticles}>Articles about toddlers</Button>
           </CardBody>
         </Card>
         <Card>
           <CardImg top="top" width="100%" src={require( "./threeToddlers.png")} alt="Card image cap"/>
           <CardBody>
-            <Button outline color="danger" size="lg" block onClick={this.getArticles}>Button</Button>
+            <Button outline color="danger" size="lg" block onClick={this.getArticles}>Atricles about children</Button>
           </CardBody>
         </Card>
       </CardColumns>
@@ -105,10 +105,27 @@ class Articles extends React.Component {
 
 
                   {this.state.data && this.state.data.length > 0 ? this.state.data.map(article => {
-                  console.log('hey im working here')
+                  
                     return(
                       <div id="wrapper" style={{backgroundColor: 'light-blue'}}>
-                      <a href={article.link}>{article.title}</a>
+                      {/* <a href={article.link}>{article.title}</a> */}
+
+        <div className='card'>
+        <div className='card-header'>
+        <h3>
+        <a className='article-link' target='_blank' href=  {article.link}  >
+        {article.title}
+        </a>
+        {/* <a className='btn btn-success save'>
+        Save Article
+        </a> */}
+        </h3>
+        </div>
+        <div className='card-body'>
+        {article.headline}
+        </div>
+        </div>
+     
                 </div>)
                 }) : null }
               </div>

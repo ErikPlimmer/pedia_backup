@@ -136,7 +136,14 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
+.card-header {
+    background:rgba(245, 179, 212, 0.425);
 
+
+}
+.article-link {
+color: blue;
+}
 .splash-container {
     background: #1f8dd6;
 

@@ -67,7 +67,7 @@ export default class Recipe extends React.Component {
                             <br></br>
                             <div className="container">
                                 <div className=" text-center">
-                                    <Label className="pagination-centered">Try again.....</Label>
+                                    <Label className="pagination-centered">No recipe's were found please search again.....</Label>
                                 </div>
                             </div>
                         </div>
