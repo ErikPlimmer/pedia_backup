@@ -24,12 +24,13 @@ class Articles extends React.Component {
   }
 
   componentDidMount = () => {
-    axios.get('/get-articles').then(articles => this.setState({ data: articles.data }))
+    axios.get('/get-articles-baby').then(articles => this.setState({ data: articles.data }))
+    
   }
 
-  getArticles = () => {
-    axios.get('/scrape').then(result => {
-      axios.get('/get-articles').then(articles => {
+  getArticlesBaby = () => {
+    axios.get('/scrape-baby').then(result => {
+      axios.get('/get-articles-baby').then(articles => {
         console.log("articles:",articles)
         this.setState({
           data: articles.data
@@ -62,14 +63,14 @@ class Articles extends React.Component {
   render() {
     console.log(this.state.data)
     return (<div className="App">
-    <div class="header">
-        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <div className="header">
+        <div className="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><Link to="/" class="pure-menu-link">Home page</Link></li>
-                {/* <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Search</Link></li> */}
-                <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
-                <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
+            <ul className="pure-menu-list">
+                <li className="pure-menu-item"><Link to="/" className="pure-menu-link">Home page</Link></li>
+                {/* <li className="pure-menu-item"><Link to="/Articles" className="pure-menu-link">Search</Link></li> */}
+                <li className="pure-menu-item"><Link to="/RecipePage" className="pure-menu-link">Recipes</Link></li>
+                <li className="pure-menu-item"><Link to="#" className="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>
     </div>
@@ -84,7 +85,7 @@ class Articles extends React.Component {
           <CardImg top="top" width="100%" src={require( "./babies3.jpg")} alt="Card image cap"/>
           <CardBody>
 
-            <Button outline color="success" size="lg" block onClick={this.getArticles}>Babies</Button>
+            <Button outline color="success" size="lg" block onClick={this.getArticlesBaby}>Babies</Button>
             {/* <Button outline color="success" size="lg" block onClick={this.deleteArticles}>clear articles</Button> */}
           </CardBody>
 
@@ -134,7 +135,7 @@ class Articles extends React.Component {
 
 
 
-      <div class="footer l-box">
+      <div className="footer l-box">
         <p></p>
       </div>
     </div>);

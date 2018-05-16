@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
     // Add API Routes
     // app.use("/api/article", APIRoutes);
     // A GET route for scraping the echoJS website
-    app.get("/scrape", function(req, res) {
+    app.get("/scrape-baby", function(req, res) {
         let name = "baby"
         // First, we grab the body of the html with request
         axios.get(`https://www.parenting.com/${name}`).then(function(response) {
@@ -68,7 +68,7 @@ if (process.env.NODE_ENV === "production") {
       });
     });
 
-    app.get('/get-articles', (req, res) => {
+    app.get('/get-articles-baby', (req, res) => {
       db.Article.find()
       .then(result  => {
         // console.log(result, "dbArticle from database");

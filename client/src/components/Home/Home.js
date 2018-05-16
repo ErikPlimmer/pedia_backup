@@ -10,12 +10,12 @@ class Home extends React.Component {
         <div className="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 
 
-            <ul class="pure-menu-list">
+            <ul className="pure-menu-list">
 
-                <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
-                <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
+                <li className="pure-menu-item"><Link to="/RecipePage" className="pure-menu-link">Recipes</Link></li>
+                <li className="pure-menu-item"><Link to="/Articles" className="pure-menu-link">Articles</Link></li>
 
-                <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
+                <li className="pure-menu-item"><Link to="#" className="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>
     </div>
