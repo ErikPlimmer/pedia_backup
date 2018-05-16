@@ -56,7 +56,7 @@ export default class Recipe extends React.Component {
                         <br></br>
                         <div className="container">
                             <div className="text-center">
-                              <Progress animated color="info" value={"75"}>Fetching Recipe...</Progress>                            </div>
+                              <Progress animated color="info" value={"75"}>Fetching Recipe...</Progress></div>
                         </div>
                     </div>
                 )

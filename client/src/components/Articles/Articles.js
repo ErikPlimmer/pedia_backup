@@ -84,7 +84,7 @@ class Articles extends React.Component {
           <CardImg top="top" width="100%" src={require( "./babies3.jpg")} alt="Card image cap"/>
           <CardBody>
 
-            <Button outline color="success" size="lg" block onClick={this.getArticles}>Articles about babies</Button>
+            <Button outline color="success" size="lg" block onClick={this.getArticles}>Babies</Button>
             {/* <Button outline color="success" size="lg" block onClick={this.deleteArticles}>clear articles</Button> */}
           </CardBody>
 
@@ -92,13 +92,13 @@ class Articles extends React.Component {
         <Card>
           <CardImg top="top" width="100%" src={require( "./toddlers4.jpeg")} alt="Card image cap"/>
           <CardBody>
-          <Button outline color="warning" size="lg" block onClick={this.getArticles}>Articles about toddlers</Button>
+          <Button outline color="warning" size="lg" block onClick={this.getArticles}>Toddlers</Button>
           </CardBody>
         </Card>
         <Card>
           <CardImg top="top" width="100%" src={require( "./children2.jpg")} alt="Card image cap"/>
           <CardBody>
-            <Button outline color="danger" size="lg" block onClick={this.getArticles}>Atricles about children</Button>
+            <Button outline color="danger" size="lg" block onClick={this.getArticles}>Children</Button>
           </CardBody>
         </Card>
       </CardColumns>

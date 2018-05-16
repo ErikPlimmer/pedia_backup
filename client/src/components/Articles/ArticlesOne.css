@@ -139,12 +139,12 @@ a.pure-button-primary {
  * This is the blue top section that appears on the page.
  */
 .card-header {
-    background:rgba(245, 179, 212, 0.425);
+    background:steelblue;
 
 
 }
 .article-link {
-color: blue;
+color: white;
 }
 .splash-container {
     background: #1f8dd6;
