@@ -20,7 +20,7 @@ class RecipePage extends React.Component {
         </div>
     </div>
 
-    <div className="splash-container">
+    <div className="splash-containerDiv">
         <div className="splash">
             <h1 className="splash-head">Welcome to PediaPedia</h1>
             <p className="splash-subhead">

@@ -138,8 +138,8 @@ a.pure-button-primary {
     margin-top: 30%;
 }
 .splash-container {
-    background: #1fcad6;
-
+    /* background: #1fcad6; */
+    /* background: mediumspringgreen; */
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
@@ -147,7 +147,21 @@ a.pure-button-primary {
     height: 50%;
     top: 0;
     left: 0;
-    position: fixed !important;
+    /* position: fixed !important; */
+    position: absolute;
+}
+.splash-containerDiv {
+    background: #1fc1d6;
+    /* background: mediumspringgreen; */
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    /* position: fixed !important; */
+    position: absolute;
 }
 
 .splash {
@@ -192,7 +206,7 @@ a.pure-button-primary {
 .splash-secondary { 
     color:green;
 
-    background-color: goldenrod;
+    /* background-color: goldenrod; */
     /* width: 88%; */
     height: 200px;
     margin-top: 500px;
