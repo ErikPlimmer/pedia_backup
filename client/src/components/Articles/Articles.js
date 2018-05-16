@@ -111,7 +111,7 @@ class Articles extends React.Component {
                       <div id="wrapper" style={{backgroundColor: 'light-blue'}}>
                       {/* <a href={article.link}>{article.title}</a> */}
 
-        <div className='card'>
+        <div className='cardA'>
         <div className='card-header'>
         <h3>
         <a className='article-link' target='_blank' href=  {article.link}  >

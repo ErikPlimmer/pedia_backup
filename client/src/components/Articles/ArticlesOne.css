@@ -138,9 +138,13 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
+ .cardA {
+    width: 80%;
+    margin-left: 10%; 
+ }
 .card-header {
     background:steelblue;
-
+    
 
 }
 .article-link {
