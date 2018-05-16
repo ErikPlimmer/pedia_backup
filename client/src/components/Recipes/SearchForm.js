@@ -32,7 +32,7 @@ export default class SearchForm extends React.Component {
 
     // if(this.state.value.length>0){
     //   this.value='chicken';
-    console.log(e.target);
+    
       this.props.onSearch(this.state.value);
 
     // }

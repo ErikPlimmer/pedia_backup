@@ -39,9 +39,9 @@ class Articles extends React.Component {
   }
   deleteArticles = (id) => {
       axios.delete('/delete-articles').then(articles => {
-        console.log(articles)
+        
         this.setState({
-          data: articles.data
+          data: ""
         })
       })
   }
@@ -85,6 +85,7 @@ class Articles extends React.Component {
           <CardBody>
 
             <Button outline color="success" size="lg" block onClick={this.getArticles}>Baby</Button>
+            {/* <Button outline color="success" size="lg" block onClick={this.deleteArticles}>clear articles</Button> */}
           </CardBody>
         </Card>
         <Card>
@@ -120,6 +121,7 @@ class Articles extends React.Component {
       </div>
     </div>);
   }
+ 
 }
 
 export default Articles;
