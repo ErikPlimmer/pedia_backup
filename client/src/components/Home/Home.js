@@ -14,7 +14,7 @@ class Home extends React.Component {
 
                 <li class="pure-menu-item"><Link to="/RecipePage" class="pure-menu-link">Recipes</Link></li>
                 <li class="pure-menu-item"><Link to="/Articles" class="pure-menu-link">Articles</Link></li>
-                <li class="pure-menu-item"><Link to="/Profile" class="pure-menu-link">My Profile</Link></li>
+
                 <li class="pure-menu-item"><Link to="#" class="pure-menu-link">Sign Up</Link></li>
             </ul>
         </div>
@@ -26,10 +26,10 @@ class Home extends React.Component {
             <p className="splash-subhead">
                 A place for parents to find useful information to help navigate through parenthood.
             </p>
+
             <p>
-                <Link to="/Articles" className="pure-button pure-button-primary">Articles!</Link>
-                </p>
-                <p>
+                <Link to="/Articles" className="pure-button pure-button-primary" style={{marginRight:"75px"}}>Articles!</Link>
+
                 <Link to="/RecipePage" className="pure-button pure-button-primary">Recipes!</Link>
             </p>
         </div>
